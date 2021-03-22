@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+#app {
+  padding-top: 50px;
+}
+
+.container-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.center-items {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.main-colour {
+  color: #001533; 
+}
+
+.font-w-600 {
+  font-weight: 600;
+}
+
+.font-w-700 {
+  font-weight: 700;
+}
+
+#add {
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 25px 5px;
+}
+
+#input-element {
+  width: 400px;
+  border-radius: 10px;
+  margin: 25px 5px;
+  padding: 0 20px;
+  font-size: 1.7rem;
+}
+
+.card {
+  border-bottom: 1px solid #dadee1;
+  padding: 10px;
+  margin: 10px 0;
+  height: 50px;
+  width: 95%;
+  font-size: 1.9rem;
+}
+
+.activeEl {
+  background-color: #6beda5;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 400px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.container-lists {
+  background-color: #f5f7f7;
+  border-radius: 10px;
+  padding: 0 25px;
+  width: 100%;
+  margin: 25px 0;
+}

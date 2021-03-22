@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- VUE.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue to-do list</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="app">
+        <!-- Logo e campo input -->
+        <div class="text-center">
+          <img class="logo" src="img/logo_boolean.png" alt="logo">
+        </div>
+        <div class="container new-todo">
+          <div class="row">
+            <div class="col-xs-12 main-colour container-flex flex-row justify-center">
+              <input id="input-element" @keypress.enter="pushTask" type="text" v-model="items" placeholder="Nuovo Todo">
+              <button id="add" type="button" name="button" @click="pushTask">Aggiungi</button>
+            </div>
+          </div>
+          <!-- LISTA -->
+          <div class="row list">
+            <div class="col-xs-12 container-flex flex-column justify-center center-items">
+              <ul class="container-lists main-colour container-flex flex-column justify-center center-items">
+                  <li v-bind:class="{ activeEl: (isActive !== selectedElements.includes(e)) }" v-for="(e, index) in todoElements" @click="toggleTask(e)" class="card font-w-600 container-flex flex-row justify-between center-items">
+                    <span>{{e}}</span>
+                    <a href="#" @click.stop="removeTask(index)"><i class="fa fa-times main-colour" aria-hidden="true"></i></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
